@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const apiUrl = import.meta.env.MICROCMS_SERVICE_DOMAIN;
+const baseHeaders = {
+  headers: { "X-MICROCMS-API-KEY": import.meta.env.MICROCMS_API_KEY },
+};
+
+const response = await fetch(apiUrl, baseHeaders);
+const data = await response.json();
+
+console.log("data: ", data.contents[0]);
+---
+
+<Layout title="micro">
+  <main>
+    <div>fdf</div>
+  </main>
+</Layout>
