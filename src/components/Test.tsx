@@ -1,5 +1,15 @@
 import React from "react";
 
-export const Test = (): JSX.Element => {
-  return <h1>testtesttest</h1>;
+type Props = {
+  content: string;
+  children: any;
+};
+
+export const Test = ({ content, children }: Props): JSX.Element => {
+  return (
+    <h1>
+      testtesttest
+      {children}
+    </h1>
+  );
 };
